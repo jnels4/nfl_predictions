@@ -5,6 +5,10 @@ ML project to determine NFL outcomes based on historical NFL data
 
 Using machine learning to analyze historical NFL data in order to make predicitons about current/future NFL games.  
 
+## Question
+
+Can NFL outcomes be predicted using historical NFL data?
+
 
 ## Resources
 - kaggle
