@@ -13,14 +13,19 @@ Can NFL outcomes be predicted using historical NFL data?
 ## Resources
 - kaggle
 - spreadspoke.csv
-- Amazom S3
+- Amazon S3
+- google colabs
+- python
+- pandas
+- nympy
+- pyspark
+- sklearn
 
 
 ## Communication
 - zoom
 - slack
 - google docs
-- google meet
 - github
 
 ## Data Cleaning Process
