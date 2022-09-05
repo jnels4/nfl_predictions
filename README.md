@@ -38,6 +38,13 @@ Can NFL outcomes be predicted using historical NFL data?
 ## Machine Learning
 
 Currently we are using "RandomOverSampler".  We are still deciding which model to settle on. 
+ * balanced accuracy: 0.955 --> 95.5% 
+
+SMOTE 
+ * balanced accuracy: 0.955 --> 95.5% 
+
+SMOTEEN 
+ * balanced accuracy: 1 <-- this model will not be used. 
 
 ## Results
 
