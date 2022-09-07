@@ -20,6 +20,9 @@ Can NFL outcomes be predicted using historical NFL data?
 - nympy
 - pyspark
 - sklearn
+- html
+- javascript
+- weather API
 
 
 ## Communication
