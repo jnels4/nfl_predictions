@@ -46,6 +46,14 @@ SMOTE
 SMOTEEN 
  * balanced accuracy: 1 <-- this model will not be used. 
 
+## Dashboard
+- Javascript
+- HTML
+- Display winning percentage for home/away team
+- Allow useer to choose the home/away from drop down
+- Display total games historically played by these teams for the given combination
+- Link stadium (based on home team), display current local weather for stadium (weather API)
+
 ## Results
 
 ## Summary
