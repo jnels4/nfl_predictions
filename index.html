@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
+  
 </head>
 
 <style>
@@ -17,14 +18,23 @@
     p {font-family:Georgia, serif;font-size:14px;font-style:normal;font-weight:normal;color:#000000;background-color:#ffffff;}
 </style>
 <body>
+  <header> 
+    <nav class = "navbar fixed-top navbar-expand-lg navbar-light white">
+      <div class = "container-fluid">
+        <iframe src="https://scorestream.com/widgets/scoreboards/horz?userWidgetId=51787" style="padding:0px;border:0px;width:100%;max-width:100%;height:100%;max-height:100%;"
+                        title="Realtime sports scoreboard widget" scrolling="no" frameBorder="0"></iframe>
+       <!-- <div class="scorestream-widget-container" data-ss_widget_type="horzScoreboard" data-user-widget-id="51787"></div><script async="async" type="text/javascript" src="https://scorestream.com/apiJsCdn/widgets/embed.js"></script> -->
+      </div>
+    </nav>
+  </header>
   <div class="container">
     <div class="row">
       <div class="col-md-12 jumbotron text-center">
         <h1>NFL Predictions</h1>
-        <p>Please use the interactive prediction model see which team is more likly to win!</p>
+        <p>Please use the interactive prediction model see which team is more likly to win!</p> 
       </div>
     </div>
-
+    
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="logis.js"></script>
