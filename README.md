@@ -40,9 +40,9 @@ Can NFL outcomes be predicted using historical NFL data?
 
 ## Machine Learning
 
-For this project, our team wanted to see if we could reliably predict NFL outcomes based on historical NFL data, this would mean that our predicitons are agnostic of players and stats.  Initially, after cleaning the data, we ran the entire data set together, and this continually produced an accuracy rating of 100%.  Seeing this, we were skeptical about the reliabilty of the model and data set.  We decided to run a model for each home/away pair of teams and produce an accuracy rating for each pair.  This seemed much more reliable; however, took a much longer amount of time.  Separating each home/away pair allowed us to generate accuracy values that were not solely 100%.  
-
 Currently we are using "RandomOverSampler".  We are still deciding which model to settle on. 
+
+ * xgboost 
  * balanced accuracy: 0.955 --> 95.5% 
 
 SMOTE 
@@ -60,5 +60,9 @@ SMOTEEN
 - Link stadium (based on home team), display current local weather for stadium (weather API)
 
 ## Results
+Accuracy was tested on all home-away team combinations:
+![image](https://user-images.githubusercontent.com/67160240/190254834-b0bb4f9f-3536-4dd4-98fb-bcc7ccbed535.png)
+
+
 
 ## Summary
