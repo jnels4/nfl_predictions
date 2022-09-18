@@ -10,7 +10,7 @@ Our project is classified as supervised machine learning, as it trains the model
 
 [John Nelson](https://github.com/jnels4)
 
-[Rob Berger]() 
+[Rob Berger](https://github.com/berg0804) 
 
 # Resources 
 
