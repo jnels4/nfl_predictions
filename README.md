@@ -6,9 +6,11 @@ Our project is classified as supervised machine learning, as it trains the model
 
 # Contributors
 
-Brittaney Kura 
-John Nelson 
-Rob Berger 
+[Brittaney Kura](https://github.com/Brit0812)
+
+[John Nelson](https://github.com/jnels4)
+
+[Rob Berger]() 
 
 # Resources 
 
