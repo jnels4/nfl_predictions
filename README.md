@@ -120,6 +120,10 @@ In the final version of the HTML, those using the prediction model will be able 
 
 ![](images/HTML.png)
 
+In the event someone chooses 2 teams that don't have a matchup in the database, it will give them a message: 
+
+![](images/no_data.png)
+
 # Summary 
 
 Once we found model that best suited out data and need, we then applied the model to the whole dataset. In order to do this, we created a for loop, that would take the home team from the home team list (Team H) and a visiting team from the visiting team list (Team A) and place it into a DataFrame. The 2 teams that were pulled are then placed in their perspective teams, H or A, the for loop then goes onto the preprocessed data that’s then split in to features (X) and target (y) arrays. After the X and y training/testing sets are split, using train_test_split and setting a random_state of 1, we then began to fit our model. 
