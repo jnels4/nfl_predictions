@@ -63,14 +63,12 @@ When trying to figure out a game plan, communication is essential: zoom and slac
 
 •	Another DataFrame was made to represent each team’s overall win percentage. Each team had the sum of their wins and losses pulled from a binary list. A win and loss percentage was then calculated for each team.
    
-
-
-Image of the code 
+![](images/.png)-- code
 
 •	Since we converted the new cleaned data and historical data into a DataFrame, we were able to convert them into .jsons. This would be needed when creating a .html, as it would allow us to import our new dfs to the website. 
 
 
-o	Image of .json conversion 
+![](images/.png)--.json conversion
 
 #  Machine Learning and Their Results 
 
@@ -91,7 +89,7 @@ When using machine learning, it’s important to find a model that would be best
 
  This correction was applied to: 'St. Louis Rams' to 'Los Angeles Rams', 'St. Louis Cardinals' to 'Arizona Cardinals', 'St. Louis Cardinals' to 'Arizona Cardinals', 'Oakland Raiders' to 'Las Vegas Raiders', 'Los Angeles Raiders' to 'Las Vegas Raiders', 'Houston Oilers' to 'Tennessee Titans', 'Tennessee Oilers' to 'Tennessee Titans', 'San Diego Chargers' to 'Los Angeles Chargers', and 'Baltimore Colts' to 'Indianapolis Colts'. 
 
-	OR add an image of the code######
+![](images/.png)-- conversion pic
 
    * After applying the correction, the accuracy had improved, but there was still the possibility of underfitting. 
 
@@ -109,21 +107,21 @@ When using machine learning, it’s important to find a model that would be best
 
 When creating the dashboard, we decided to go with HTML, and start from the beginning. We added an NFL background, which was added to our style.css, along with other the font of our jumbotron and their colors. The addition of a dropdown menus was crucial, as it allowed those using the predictor to pull the 2 teams they’d like to see. 
 
-# CODE IMAGE HERE 
+![](images/.png)--- code html
 
 Originally, there was another background covering the NFL background, in order to correct this the 2nd background was made transparent, using “bg-transparent’ rather than “bg- info”. 
 
-# New image of code here- with the correction of the transparent
+![](images/.png)-- with transparent
 
 In the final version of the HTML, those using the prediction model will be able to their home and away teams from the drop-down menus. Once they pick their 2 teams, a small display will appear with the stadium they’re playing in. Another larger display will have a gauge, where it shows the odds of the home team winning. 
 
-# image of actual dashboard
+![](images/.png)-- full dashboard 
 
 # Summary 
 
 Once we found model that best suited out data and need, we then applied the model to the whole dataset. In order to do this, we created a for loop, that would take the home team from the home team list (Team H) and a visiting team from the visiting team list (Team A) and place it into a DataFrame. The 2 teams that were pulled are then placed in their perspective teams, H or A, the for loop then goes onto the preprocessed data that’s then split in to features (X) and target (y) arrays. After the X and y training/testing sets are split, using train_test_split and setting a random_state of 1, we then began to fit our model. 
 
-# for loop image
+![](images/.png)-- for loop
 
 
 Multiple models were used and the one that proved to be the most beneficial was XGBoost, giving an accuracy of 67%! While this isn’t the most accurate, it does provide a solid baseline to build upon. A possible issue with our model may be a lack of data, especially between certain teams. When running the loop, an issue we noticed was a few teams facing one another were missing completely. When looking through the CSV we noticed certain games were missing. 
