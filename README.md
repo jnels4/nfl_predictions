@@ -76,32 +76,32 @@ o	Image of .json conversion
 
 When using machine learning, it’s important to find a model that would be best suited for your sample. We initial chose 2 teams, the New York Jets and the Buffalo Bills, to run our preliminary tests on. 
 
- * For example, SMOTE is best used for oversampling and imbalances. If one feature/class were to be underrepresented, this could impact your model giving you inaccurate accuracies. SMOTE will essentially generate new instances for the data, thus improving your model’s accuracy. 
+* For example, SMOTE is best used for oversampling and imbalances. If one feature/class were to be underrepresented, this could impact your model giving you inaccurate accuracies. SMOTE will essentially generate new instances for the data, thus improving your model’s accuracy. 
 
 
-o	A confusion matrix was made, which is a table with the distribution classifiers summary on the data. The matric will assist in the evaluation of the model, allowing us to see how well the model is performing, or not, so we can make adjustments as needed. 
+   * A confusion matrix was made, which is a table with the distribution classifiers summary on the data. The matric will assist in the evaluation of the model, allowing us to see how well the model is performing, or not, so we can make adjustments as needed. 
 
-o	This model wasn’t needed for our purposes, but the test was still run. The model’s balanced accuracy was a 95.5%. 
+   * This model wasn’t needed for our purposes, but the test was still run. The model’s balanced accuracy was a 95.5%. 
 
 •	Random Forest Classifier, is another machine learning model, that’s incredibly versatile as its able to provide great solutions to intricate problems. When running this model, no scaling is required, but could be done, and the model will provide a great accuracy (if warranted). When this model is run it creates decision trees that predict possible outcomes. For example, if there’s a fork in the road will the person go to the left or right? If they go to the left they may find a town, but if they go to the right they might find a metropolis. While that example is very basic, the decision tree can be intricate and could help find the best possible outcome. This model helps reduce overfitting the dataset, will work with missing data, and provides a great accuracy. 
 
-o	This model was going to be our primary mechanism in our machine learning, as it had a decent accuracy and is historically reliable. But, we decided to go a different route as we noticed our model may be underfitting. 
+   * This model was going to be our primary mechanism in our machine learning, as it had a decent accuracy and is historically reliable. But, we decided to go a different route as we noticed our model may be underfitting. 
 
-o	Random Forest Classifiers accuracy for few of the outputs were inaccurate or gave us a 1. To correct this, we noticed some of the teams had their old names, meaning, the teams moved to another state/city or they completely renamed their teams. For example, the ‘Washington Redskins’ had a name change to the Washington Football team in 2020. A majority of the data from 1979 to 2019 knew the team’s name as the ‘Washington Redskins’ causing the ‘Washington Football team’ to have a small amount of data. Since there was a small amount of data, the model found it difficult to provide an accurate prediction. Merging the 2 names together, was a solution to this issue.
+   * Random Forest Classifiers accuracy for few of the outputs were inaccurate or gave us a 1. To correct this, we noticed some of the teams had their old names, meaning, the teams moved to another state/city or they completely renamed their teams. For example, the ‘Washington Redskins’ had a name change to the Washington Football team in 2020. A majority of the data from 1979 to 2019 knew the team’s name as the ‘Washington Redskins’ causing the ‘Washington Football team’ to have a small amount of data. Since there was a small amount of data, the model found it difficult to provide an accurate prediction. Merging the 2 names together, was a solution to this issue.
 
  This correction was applied to: 'St. Louis Rams' to 'Los Angeles Rams', 'St. Louis Cardinals' to 'Arizona Cardinals', 'St. Louis Cardinals' to 'Arizona Cardinals', 'Oakland Raiders' to 'Las Vegas Raiders', 'Los Angeles Raiders' to 'Las Vegas Raiders', 'Houston Oilers' to 'Tennessee Titans', 'Tennessee Oilers' to 'Tennessee Titans', 'San Diego Chargers' to 'Los Angeles Chargers', and 'Baltimore Colts' to 'Indianapolis Colts'. 
 
 	OR add an image of the code######
 
-o	After applying the correction, the accuracy had improved, but there was still the possibility of underfitting. 
+   * After applying the correction, the accuracy had improved, but there was still the possibility of underfitting. 
 
-o	The ‘New York Jets’ vs the ‘Buffalo Bills’ run through, had an accuracy of 95%.
+   * The ‘New York Jets’ vs the ‘Buffalo Bills’ run through, had an accuracy of 95%.
 
 •	XGBoost also known as Extreme Gradient Boosting, is similar to that of the Random Forest Classifier, while both place their priorities on different aspects of the data they both assist in the data correction. Random Forest Classifiers help reduce overfitting and variance. On the other hand, XGBoost is great at reducing bias and underfitting. 
 
-o	This model was made our primary model as it improved the accuracy and addressed the issue of underfitting. When there’s the issue of underfitting, it means the model is not able to correctly capture the relationship between the inputs and outputs. 
+   * This model was made our primary model as it improved the accuracy and addressed the issue of underfitting. When there’s the issue of underfitting, it means the model is not able to correctly capture the relationship between the inputs and outputs. 
 
-o	Once we fit the model, after testing the model with the ‘New York Jets’ vs the ‘Buffalo Bills’ we found our accuracy improved slightly to 97%.
+   * Once we fit the model, after testing the model with the ‘New York Jets’ vs the ‘Buffalo Bills’ we found our accuracy improved slightly to 97%.
 
 
 
