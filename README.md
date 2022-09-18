@@ -63,7 +63,7 @@ When trying to figure out a game plan, communication is essential: zoom and slac
 
 •	Another DataFrame was made to represent each team’s overall win percentage. Each team had the sum of their wins and losses pulled from a binary list. A win and loss percentage was then calculated for each team.
    
-![](images/.png)-- code
+![](images/.png)-- code historical 
 
 •	Since we converted the new cleaned data and historical data into a DataFrame, we were able to convert them into .jsons. This would be needed when creating a .html, as it would allow us to import our new dfs to the website. 
 
