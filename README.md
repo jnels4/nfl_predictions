@@ -11,9 +11,8 @@ John Nelson
 Rob Berger 
 
 # Resources 
-•	Kaggle – make the link in the name 
 
-o	https://www.kaggle.com/datasets/tobycrabtree/nfl-scores-and-betting-data?resource=download&select=spreadspoke_scores.csv
+•	[Kaggle](https://www.kaggle.com/datasets/tobycrabtree/nfl-scores-and-betting-data?resource=download&select=spreadspoke_scores.csv)
 
 •	spreadspoke.csv
 
