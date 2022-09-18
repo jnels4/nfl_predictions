@@ -12,17 +12,29 @@ Rob Berger
 
 # Resources 
 •	Kaggle – make the link in the name 
+
 o	https://www.kaggle.com/datasets/tobycrabtree/nfl-scores-and-betting-data?resource=download&select=spreadspoke_scores.csv
+
 •	spreadspoke.csv
+
 •	Amazon S3
+
 •	google colabs
+
 •	python
+
 •	pandas
+
 •	nympy
+
 •	pyspark
+
 •	sklearn
+
 •	html
+
 •	javascript
+
 # Communication
 
 When trying to figure out a game plan, communication is essential: zoom and slack have been our primary forms of communication. We also have a google docs set up, where we’ve created checklists for each week in order to stay on track. Google Colab is another form of communication: as its where we have added additional code, made notes on corrections, put forward ideas and so forth. 
@@ -31,23 +43,40 @@ When trying to figure out a game plan, communication is essential: zoom and slac
 # Data Cleaning Process
 
 •	As we were going through the spreadspoke.csv, we looked at each column and determined the columns that were useful and what would unnecessary.  
+
 •	We also removed data prior to 1979, the reason for a large chunk of data being removed was because most of the data we needed was empty. If we were to place N/As or null values, it would have a negative impact on our data and our outcomes. 
+
 •	A list was created to see each column, this is important as it allows us to filter through each column with ease. When it’s a list were able to say “well, ‘schedule_date' isn’t important to us as the dates of the games will have no impact on the outcome of the game. A Thursday night in 1989 won’t tell us the probability of the New York Jets winning, therego it can be removed”. 
+
 •	The columns that were removed were: ‘schedule_date', 'schedule_season', 'schedule_week', 'schedule_playoff', 'team_favorite_id', 'stadium_neutral','weather_humidity', 'over_under_line'.
+
 •	An additional column “home_win” was added. This column was binary, as it adds a 2 if the “home_score” was greater than the “away_score”” signifying a home team win, otherwise there’s a 1. 
+
 •	Another column had been added “weather_details”, which replaced “DOME” with a 1 and anything else was a 0. 
-o	This was done to both the “home_win” and “weather_details” as it makes it easier to be processes in the machine learning model, since it’s been converted to binary format. 
-•	Once the data had been cleaned and preprocesses: the removal of unnecessary columns and rows, adding columns with contained binary formatting, and running though the data to find anymore discrepancies that may cause errors down the line the data was then converted to a DataFrame. 
-•	Another DataFrame was made to represent each team’s overall win percentage. Each team had the sum of their wins and losses pulled from a binary list. A win and loss percentage was then calculated for each team.
-o	Image of the code 
-•	Since we converted the new cleaned data and historical data into a DataFrame, we were able to convert them into .jsons. This would be needed when creating a .html, as it would allow us to import our new dfs to the website. 
+
+* This was done to both the “home_win” and “weather_details” as it makes it easier to be processes in the machine learning model, since it’s been converted to binary format. 
+
+
+* Once the data had been cleaned and preprocesses: the removal of unnecessary columns and rows, adding columns with contained binary formatting, and running though the data to find anymore discrepancies that may cause errors down the line the data was then converted to a DataFrame. 
+
+
+   * Another DataFrame was made to represent each team’s overall win percentage. Each team had the sum of their wins and losses pulled from a binary list. A win and loss percentage was then calculated for each team.
+   
+
+
+Image of the code 
+
+   * Since we converted the new cleaned data and historical data into a DataFrame, we were able to convert them into .jsons. This would be needed when creating a .html, as it would allow us to import our new dfs to the website. 
+
+
 o	Image of .json conversion 
 
 #  Machine Learning and Their Results 
 
 When using machine learning, it’s important to find a model that would be best suited for your sample. We initial chose 2 teams, the New York Jets and the Buffalo Bills, to run our preliminary tests on. 
-•	For example, SMOTE is best used for oversampling and imbalances. If one feature/class were to be underrepresented, this could impact your model giving you inaccurate accuracies. SMOTE will essentially generate new instances for the data, thus improving your model’s accuracy. 
-o	A confusion matrix was made, which is a table with the distribution classifiers summary on the data. The matric will assist in the evaluation of the model, allowing us to see how well the model is performing, or not, so we can make adjustments as needed. 
+
+ * For example, SMOTE is best used for oversampling and imbalances. If one feature/class were to be underrepresented, this could impact your model giving you inaccurate accuracies. SMOTE will essentially generate new instances for the data, thus improving your model’s accuracy. 
+A confusion matrix was made, which is a table with the distribution classifiers summary on the data. The matric will assist in the evaluation of the model, allowing us to see how well the model is performing, or not, so we can make adjustments as needed. 
 o	This model wasn’t needed for our purposes, but the test was still run. The model’s balanced accuracy was a 95.5%. 
 •	Random Forest Classifier, is another machine learning model, that’s incredibly versatile as its able to provide great solutions to intricate problems. When running this model, no scaling is required, but could be done, and the model will provide a great accuracy (if warranted). When this model is run it creates decision trees that predict possible outcomes. For example, if there’s a fork in the road will the person go to the left or right? If they go to the left they may find a town, but if they go to the right they might find a metropolis. While that example is very basic, the decision tree can be intricate and could help find the best possible outcome. This model helps reduce overfitting the dataset, will work with missing data, and provides a great accuracy. 
 o	This model was going to be our primary mechanism in our machine learning, as it had a decent accuracy and is historically reliable. But, we decided to go a different route as we noticed our model may be underfitting. 
