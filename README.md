@@ -70,7 +70,7 @@ When trying to figure out a game plan, communication is essential: zoom and slac
 •	Since we converted the new cleaned data and historical data into a DataFrame, we were able to convert them into .jsons. This would be needed when creating a .html, as it would allow us to import our new dfs to the website. 
 
 
-![](images/converting_to_json.png)--.json conversion
+![](images/converting_to_json.png)
 
 #  Machine Learning and Their Results 
 
@@ -91,7 +91,7 @@ When using machine learning, it’s important to find a model that would be best
 
  This correction was applied to: 'St. Louis Rams' to 'Los Angeles Rams', 'St. Louis Cardinals' to 'Arizona Cardinals', 'St. Louis Cardinals' to 'Arizona Cardinals', 'Oakland Raiders' to 'Las Vegas Raiders', 'Los Angeles Raiders' to 'Las Vegas Raiders', 'Houston Oilers' to 'Tennessee Titans', 'Tennessee Oilers' to 'Tennessee Titans', 'San Diego Chargers' to 'Los Angeles Chargers', and 'Baltimore Colts' to 'Indianapolis Colts'. 
 
-![](images/ex_name_conv_clean_up.png)-- conversion pic
+![](images/ex_name_conv_clean_up.png)
 
    * After applying the correction, the accuracy had improved, but there was still the possibility of underfitting. 
 
@@ -114,17 +114,17 @@ When creating the dashboard, we decided to go with HTML, and start from the begi
 
 Originally, there was another background covering the NFL background, in order to correct this the 2nd background was made transparent, using “bg-transparent’ rather than “bg- info”. 
 
-![](images/dash_transparent.png)-- with transparent
+![](images/dash_transparent.png)
 
 In the final version of the HTML, those using the prediction model will be able to their home and away teams from the drop-down menus. Once they pick their 2 teams, a small display will appear with the stadium they’re playing in. Another larger display will have a gauge, where it shows the odds of the home team winning. 
 
-![](images/HTML.png)-- full dashboard 
+![](images/HTML.png)
 
 # Summary 
 
 Once we found model that best suited out data and need, we then applied the model to the whole dataset. In order to do this, we created a for loop, that would take the home team from the home team list (Team H) and a visiting team from the visiting team list (Team A) and place it into a DataFrame. The 2 teams that were pulled are then placed in their perspective teams, H or A, the for loop then goes onto the preprocessed data that’s then split in to features (X) and target (y) arrays. After the X and y training/testing sets are split, using train_test_split and setting a random_state of 1, we then began to fit our model. 
 
-![](images/for_loop.png)-- for loop
+![](images/for_loop.png)
 
 
 ![image](https://user-images.githubusercontent.com/67160240/190254834-b0bb4f9f-3536-4dd4-98fb-bcc7ccbed535.png)
@@ -135,6 +135,3 @@ The ‘Los Angeles Rams’ and the ‘Los Angeles Charges’ have played one ano
 If the data were to include more specific columns that would impact a game’s outcome, it might be able to gauge the accuracy better. An example would be individual player states, touch downs, yardage, team defense, the model would be able to provide a more accurate output. 
 
 When running through the models, we should have tested more teams than just ‘New York Jets’ vs the ‘Buffalo Bills’, since they already had a high yield across all the models. If we would have used another team we noticed had a fairly low accuracy, we may have been able to provide better judgment on which model to use. 
-
-
-![image](https://user-images.githubusercontent.com/67160240/190254834-b0bb4f9f-3536-4dd4-98fb-bcc7ccbed535.png)
