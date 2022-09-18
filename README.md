@@ -1,3 +1,5 @@
+![](images/above_overview.jpg.webp)
+
 # Overview
 
 The purpose of this project is to use our data filled with previous NFL games to predict current, future, and hypothetical team match ups.  In order to do so, the use of machine learning is ideal as it had the ability to learn from its previous uploaded data and predict potential outcomes. Many people wonder, which teams going to win? It will take into account home team advantage, whether or not the stadium is domed or outdoors, and weather. Home team advantage is important to take into account as teams playing in a stadium their comfortable with as they are surrounded by plenty of supportive fans and are acclimated with the playing conditions. Another important factor taken into consideration is stadium: some are domed (it has set climate conditions) and outdoor stadiums that are heavily impacted by weather. 
@@ -63,12 +65,12 @@ When trying to figure out a game plan, communication is essential: zoom and slac
 
 •	Another DataFrame was made to represent each team’s overall win percentage. Each team had the sum of their wins and losses pulled from a binary list. A win and loss percentage was then calculated for each team.
    
-![](images/.png)-- code historical 
+![](images/historical_data.png)
 
 •	Since we converted the new cleaned data and historical data into a DataFrame, we were able to convert them into .jsons. This would be needed when creating a .html, as it would allow us to import our new dfs to the website. 
 
 
-![](images/.png)--.json conversion
+![](images/converting_to_json.png)
 
 #  Machine Learning and Their Results 
 
@@ -89,7 +91,7 @@ When using machine learning, it’s important to find a model that would be best
 
  This correction was applied to: 'St. Louis Rams' to 'Los Angeles Rams', 'St. Louis Cardinals' to 'Arizona Cardinals', 'St. Louis Cardinals' to 'Arizona Cardinals', 'Oakland Raiders' to 'Las Vegas Raiders', 'Los Angeles Raiders' to 'Las Vegas Raiders', 'Houston Oilers' to 'Tennessee Titans', 'Tennessee Oilers' to 'Tennessee Titans', 'San Diego Chargers' to 'Los Angeles Chargers', and 'Baltimore Colts' to 'Indianapolis Colts'. 
 
-![](images/.png)-- conversion pic
+![](images/ex_name_conv_clean_up.png)
 
    * After applying the correction, the accuracy had improved, but there was still the possibility of underfitting. 
 
@@ -107,22 +109,25 @@ When using machine learning, it’s important to find a model that would be best
 
 When creating the dashboard, we decided to go with HTML, and start from the beginning. We added an NFL background, which was added to our style.css, along with other the font of our jumbotron and their colors. The addition of a dropdown menus was crucial, as it allowed those using the predictor to pull the 2 teams they’d like to see. 
 
-![](images/.png)--- code html
+![](images/dash_drop_code.png)
+![](images/drop_down.png)
 
 Originally, there was another background covering the NFL background, in order to correct this the 2nd background was made transparent, using “bg-transparent’ rather than “bg- info”. 
 
-![](images/.png)-- with transparent
+![](images/dash_transparent.png)
 
 In the final version of the HTML, those using the prediction model will be able to their home and away teams from the drop-down menus. Once they pick their 2 teams, a small display will appear with the stadium they’re playing in. Another larger display will have a gauge, where it shows the odds of the home team winning. 
 
-![](images/.png)-- full dashboard 
+![](images/HTML.png)
 
 # Summary 
 
 Once we found model that best suited out data and need, we then applied the model to the whole dataset. In order to do this, we created a for loop, that would take the home team from the home team list (Team H) and a visiting team from the visiting team list (Team A) and place it into a DataFrame. The 2 teams that were pulled are then placed in their perspective teams, H or A, the for loop then goes onto the preprocessed data that’s then split in to features (X) and target (y) arrays. After the X and y training/testing sets are split, using train_test_split and setting a random_state of 1, we then began to fit our model. 
 
-![](images/.png)-- for loop
+![](images/for_loop.png)
 
+
+![image](https://user-images.githubusercontent.com/67160240/190254834-b0bb4f9f-3536-4dd4-98fb-bcc7ccbed535.png)
 
 Multiple models were used and the one that proved to be the most beneficial was XGBoost, giving an accuracy of 67%! While this isn’t the most accurate, it does provide a solid baseline to build upon. A possible issue with our model may be a lack of data, especially between certain teams. When running the loop, an issue we noticed was a few teams facing one another were missing completely. When looking through the CSV we noticed certain games were missing. 
 The ‘Los Angeles Rams’ and the ‘Los Angeles Charges’ have played one another 12 times, since 1970! Since we removed the data prior to 1979, there should be 10 games total, but our data doesn’t have these games. While some of the teams playing one another are completely missing, some are paired together, but yield a 0% accuracy. This brings back the issue of not having enough data to provide an accurate prediction. In order to correct this issue, we would have to find the missing data and merge it with our primary df. 
@@ -130,6 +135,3 @@ The ‘Los Angeles Rams’ and the ‘Los Angeles Charges’ have played one ano
 If the data were to include more specific columns that would impact a game’s outcome, it might be able to gauge the accuracy better. An example would be individual player states, touch downs, yardage, team defense, the model would be able to provide a more accurate output. 
 
 When running through the models, we should have tested more teams than just ‘New York Jets’ vs the ‘Buffalo Bills’, since they already had a high yield across all the models. If we would have used another team we noticed had a fairly low accuracy, we may have been able to provide better judgment on which model to use. 
-
-
-![image](https://user-images.githubusercontent.com/67160240/190254834-b0bb4f9f-3536-4dd4-98fb-bcc7ccbed535.png)
