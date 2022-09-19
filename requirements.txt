@@ -1,0 +1,47 @@
+import os
+spark_version = 'spark-3.2.2'
+os.environ['SPARK_VERSION']=spark_version
+# Install Spark and Java
+!apt-get update
+!apt-get install openjdk-11-jdk-headless -qq > /dev/null
+!wget -q http://www.apache.org/dist/spark/$SPARK_VERSION/$SPARK_VERSION-bin-hadoop3.2.tgz
+!tar xf $SPARK_VERSION-bin-hadoop3.2.tgz
+!pip install -q findspark
+!pip install boto3
+!pip install xmltodict
+# Set Environment Variables
+import os
+os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-11-openjdk-amd64"
+os.environ["SPARK_HOME"] = f"/content/{spark_version}-bin-hadoop3.2"
+# Start a SparkSession
+import findspark
+findspark.init()
+
+from pyspark import SparkFiles
+
+import numpy as np
+import pandas as pd
+from pathlib import Path
+from collections import Counter
+from sklearn.metrics import balanced_accuracy_score
+from sklearn.metrics import confusion_matrix
+from imblearn.metrics import classification_report_imbalanced
+from sklearn.model_selection import train_test_split
+from imblearn.over_sampling import RandomOverSampler
+from sklearn.linear_model import LogisticRegression
+import xgboost as xgb
+from xgboost import XGBClassifier
+import os
+import json
+import glob
+import shutil
+import logging
+import boto3
+import xmltodict
+
+from pyspark.sql.functions import regexp_replace
+
+from pyspark.sql import functions as F
+
+from google.colab import files
+
