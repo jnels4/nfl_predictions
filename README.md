@@ -7,6 +7,7 @@ The purpose of this project is to use our data filled with previous NFL games to
 Our project is classified as supervised machine learning, as it trains the model to find certain patterns in the data. Supervised learning, uses the labels, targets, and features in the tested model, in order to predict new data in the trained model. 
 
 [Google Slides Presentation](https://docs.google.com/presentation/d/1A9VQ32zyEPNFETQundOAMm-i-Mrp9AJrUr8tt68k8ng/edit?usp=sharing)
+
 [Dashboard](https://jnels4.github.io/nfl_predictions/)
 
 # Contributors
